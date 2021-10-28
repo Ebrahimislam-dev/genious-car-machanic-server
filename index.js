@@ -6,7 +6,7 @@ const cors = require('cors');
 require('dotenv').config()
 
 const app = express();
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 5000;
 
 //midleware
 app.use(cors())
@@ -70,11 +70,11 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('services123');
+    res.send('Running genius server');
 });
 
 
 
 app.listen(port, () => {
-    console.log('listing to port', port);
+    console.log('Running genius server on port', port);
 });
